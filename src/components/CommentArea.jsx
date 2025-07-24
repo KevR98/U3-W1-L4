@@ -25,7 +25,7 @@ class CommentArea extends Component {
       })
 
       .then((reviews) => {
-        console.log(reviews);
+        // console.log(reviews); visualizzo l'array
         this.setState({ comment: reviews });
       })
 
@@ -39,7 +39,7 @@ class CommentArea extends Component {
   }
 
   render() {
-    return <CommentsList comments={this.state.comment} />;
+    return <CommentsList content={this.state.comment} />;
   }
 }
 

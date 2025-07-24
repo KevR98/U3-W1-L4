@@ -1,8 +1,8 @@
-const SingleComment = ({ comment }) => {
+const SingleComment = (props) => {
   return (
     <>
-      <strong>{comment.author}: </strong>
-      {comment.comment}
+      <strong>{props.comment.author}: </strong>
+      {props.comment.comment}
     </>
   );
 };
