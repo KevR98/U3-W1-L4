@@ -11,7 +11,7 @@ class CommentArea extends Component {
   };
 
   getReviews = () => {
-    fetch(API, {
+    fetch(API + this.props.id, {
       headers: {
         Authorization: AUT,
       },
