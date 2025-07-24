@@ -44,6 +44,7 @@ class CommentArea extends Component {
         {this.state.comment.slice(0, 1).map((comments) => {
           return (
             <ListGroup.Item key={comments._id}>
+              <strong>{comments.author}: </strong>
               {comments.comment}
             </ListGroup.Item>
           );
