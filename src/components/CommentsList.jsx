@@ -4,6 +4,7 @@ import SingleComment from './SingleComment';
 const CommentsList = (props) => {
   return (
     <ListGroup>
+      {/* content perchè l'ho passato a content che sta nel CommentArea */}
       {props.content.slice(0, 1).map((comment) => {
         return (
           <ListGroup.Item key={comment._id}>
