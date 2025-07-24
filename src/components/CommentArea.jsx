@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import { ListGroup } from 'react-bootstrap';
+import CommentsList from './CommentsList';
 
 const API = 'https://striveschool-api.herokuapp.com/api/comments/';
 const AUT =
@@ -39,18 +39,7 @@ class CommentArea extends Component {
   }
 
   render() {
-    return (
-      <ListGroup>
-        {this.state.comment.slice(0, 1).map((comments) => {
-          return (
-            <ListGroup.Item key={comments._id}>
-              <strong>{comments.author}: </strong>
-              {comments.comment}
-            </ListGroup.Item>
-          );
-        })}
-      </ListGroup>
-    );
+    return <CommentsList comments={this.state.comment} />;
   }
 }
 
